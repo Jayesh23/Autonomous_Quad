@@ -1,11 +1,3 @@
-/*
- PROJECT: SensoDuino 0.17 
- PROGRAMMER: Hazim Bitar (techbitar at gmail dot com)
- DATE: Sep 30, 2013
- FILE: sensoduino.ino
- LICENSE: Public domain
- */
-
 // Replace sensor numbers with Names
 
 #define START_CMD_CHAR '>'
@@ -15,27 +7,6 @@ float roll , pitch , yaw;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Android Sensor Type No: ");
-  Serial.println("1- ACCELEROMETER  (m/s^2 - X,Y,Z)");
-  Serial.println("2- MAGNETIC_FIELD (uT - X,Y,Z)");
-  Serial.println("3- ORIENTATION (Yaw, Pitch, Roll)");
-  Serial.println("4- GYROSCOPE (rad/sec - X,Y,Z)");
-  Serial.println("5- LIGHT (SI lux)");
-  Serial.println("6- PRESSURE (hPa millibar)");
-  Serial.println("7- DEVICE TEMPERATURE (C)");
-  Serial.println("8- PROXIMITY (Centimeters or 1,0)");
-  Serial.println("9- GRAVITY (m/s^2 - X,Y,Z)");
-  Serial.println("10- LINEAR_ACCELERATION (m/s^2 - X,Y,Z)");
-  Serial.println("11- ROTATION_VECTOR (Degrees - X,Y,Z)" );
-  Serial.println("12- RELATIVE_HUMIDITY (%)");
-  Serial.println("13- AMBIENT_TEMPERATURE (C)");
-  Serial.println("14- MAGNETIC_FIELD_UNCALIBRATED (uT - X,Y,Z)");
-  Serial.println("15- GAME_ROTATION_VECTOR (Degrees - X,Y,Z)");
-  Serial.println("16- GYROSCOPE_UNCALIBRATED (rad/sec - X,Y,Z)");
-  Serial.println("17- SIGNIFICANT_MOTION (1,0)");
-  Serial.println("97 - AUDIO (Vol.)");
-  Serial.println("98 - GPS1 (Lat., Long., Alt.)");
-  Serial.println("99 - GPS2 (Bearing, Speed, Date/Time)");
   Serial.flush();
 }
 
@@ -66,11 +37,11 @@ void loop()
   Serial.println(sensorType);
   Serial.print("Sensor log#: ");
   Serial.println(logCount);
-  Serial.print("Val[0]: ");
+  Serial.print("roll : ");
   Serial.println(roll);
-  Serial.print("Val[1]: ");
+  Serial.print("pitch : ");
   Serial.println(pitch);
-  Serial.print("Val[2]: ");
+  Serial.print("yaw : ");
   Serial.println(yaw);
   Serial.println("-----------------------");
 
